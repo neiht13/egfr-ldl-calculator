@@ -22,8 +22,13 @@
   - Thiết kế hiện đại và dễ sử dụng với font chữ Nunito.
   - Hỗ trợ chuyển đổi giữa các tab tính eGFR và LDL một cách mượt mà.
   - Thông báo lỗi rõ ràng khi nhập dữ liệu không hợp lệ.
+  - Hỗ trợ cả 2 ngôn ngữ: Tiếng Việt và Tiếng Anh
 
 ## Hình Ảnh Minh Họa
+Tiếng Việt
+<img width="748" alt="Screenshot 2024-12-21 at 22 30 31" src="https://github.com/user-attachments/assets/f309941d-f8a2-4b20-8b28-30418316b768" />
+Tiếng Anh
+<img width="747" alt="Screenshot 2024-12-21 at 22 30 45" src="https://github.com/user-attachments/assets/d837fde4-722d-4253-b5cd-73a5a22d40c3" />
 
 
 ## Cài Đặt và Sử Dụng
