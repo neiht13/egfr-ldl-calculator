@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Công Cụ Tính eGFR và LDL
 
-## Getting Started
+## Mô Tả
 
-First, run the development server:
+**Công Cụ Tính eGFR và LDL** là một ứng dụng web đơn giản và trực quan giúp người dùng dễ dàng tính toán các chỉ số y tế quan trọng như eGFR (Estimated Glomerular Filtration Rate) và LDL (Low-Density Lipoprotein) dựa trên các thông số nhập vào. Công cụ hỗ trợ người dùng chọn đơn vị đo lường phù hợp và cung cấp công thức tính toán chính xác dựa trên lựa chọn đó.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tính Năng
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Tính Toán eGFR:**
+  - Sử dụng công thức MDRD - Phương pháp Jaffe.
+  - Cho phép nhập đơn vị Creatinine là µmol/L hoặc mg/dL.
+  - Hỗ trợ nhập tuổi hoặc năm sinh, giới tính, chủng tộc và hằng số tùy chỉnh.
+  - Hiển thị kết quả eGFR một cách rõ ràng, hỗ trợ cảnh báo chỉ số bình thường
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Tính Toán LDL:**
+  - Sử dụng công thức Friedewald.
+  - Cho phép chọn đơn vị đo lường cho các thông số CHOL, HDL và TRIG (mmol/L hoặc mg/dL).
+  - Đảm bảo tất cả các đơn vị nhập vào đồng nhất để tính toán chính xác.
+  - Hiển thị kết quả LDL với đơn vị phù hợp, hỗ trợ cảnh báo chỉ số bình thường
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Giao Diện Thân Thiện:**
+  - Thiết kế hiện đại và dễ sử dụng với font chữ Nunito.
+  - Hỗ trợ chuyển đổi giữa các tab tính eGFR và LDL một cách mượt mà.
+  - Thông báo lỗi rõ ràng khi nhập dữ liệu không hợp lệ.
 
-## Learn More
+## Hình Ảnh Minh Họa
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cài Đặt và Sử Dụng
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Yêu Cầu
 
-## Deploy on Vercel
+- Trình duyệt web (Chrome, Firefox, Edge, Safari, v.v.)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cách Sử Dụng
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone Repository:**
+
+   ```bash
+   git clone https://github.com/neiht13/eGFR-LDL-Calculator.git
