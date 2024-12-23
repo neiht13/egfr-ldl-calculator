@@ -13,6 +13,7 @@ const nunito = Nunito({
 export const metadata = {
   title: 'GDR & LDL Calculator',
   description: 'GDR & LDL Calculator',
+  manifest: '/manifest.json',
 };
 
 // Define the type for props
@@ -25,9 +26,6 @@ const LisLayout: React.FC<LayoutProps> = ({ children }) => {
     <html>
       <Head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ff6347" />
-        <link rel="apple-touch-icon" sizes="192x192" href="/flags/vn.png" />
-        <link rel="apple-touch-icon" sizes="512x512" href="/flags/vn.png" />
         <link rel="icon" href="/favicon.ico" />
         <title>GDR & LDL Calculator</title>
       </Head>
