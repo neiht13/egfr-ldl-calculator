@@ -49,7 +49,11 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, p
     <div className={classNames('relative', className)} ref={selectRef}>
       <button
         type="button"
-        className={classNames("flex h-12 justify-between items-center w-full px-3 py-2 bg-gray-100 focus:border hover:bg-gray-200 focus:outline-none focus:border-blue-500", isSuffix ? "rounded-r-2xl border-l-none" : "rounded-2xl")}
+        className={classNames(
+          "flex h-12 justify-between items-center w-full px-3 py-2 bg-gray-100 hover:bg-gray-200 focus:outline-none",
+          isSuffix ? "rounded-r-2xl border-l-none" : "rounded-2xl",
+          isOpen ? "border border-1 border-[tomato]": ""
+        )}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={classNames('text-gray-700', { 'text-gray-400': !selectedOption })}>
@@ -57,7 +61,6 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, p
         </span>
         <ChevronDown className="w-4 h-4 text-gray-500" />
       </button>
-
       {isOpen && (
         <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto transition ease-in-out duration-200">
           <div className="px-4 py-2 border-b border-gray-300">
@@ -67,7 +70,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, value, onChange, p
                 placeholder={"🔍"}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-1 border border-gray-100 rounded-md focus:outline-none focus:border-blue-500"
+                className="w-full p-1 border border-gray-100 rounded-md focus:outline-none focus:border-[tomato]"
               />
             </div>
           </div>

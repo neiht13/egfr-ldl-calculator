@@ -111,23 +111,26 @@ const LDLCalculator: React.FC = () => {
             onChange={(value) =>
               setTotalChol(value === '' ? '' : (typeof value === 'number' ? value : parseFloat(value)))
             }
-            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-[tomato] focus:border-[tomato] focus:outline-none"
             required
-          />
-          <CustomSelect
-            options={[
-              { value: 'mmol/L', label: 'mmol/L' },
-              { value: 'mg/dl', label: 'mg/dL' },
-            ]}
-            value={cholUnit}
-            onChange={(value) => {
-              setCholUnit(value as 'mmol/L' | 'mg/dl');
-              setHdlUnit(value as 'mmol/L' | 'mg/dl');
-              setTrigUnit(value as 'mmol/L' | 'mg/dl');
-            }}
-            placeholder={t.unit}
-            className="rounded-r-xl border-l-0 mt-7"
-            isSuffix={true}
+            suffix={
+
+              <CustomSelect
+                options={[
+                  { value: 'mmol/L', label: 'mmol/L' },
+                  { value: 'mg/dl', label: 'mg/dL' },
+                ]}
+                value={cholUnit}
+                onChange={(value) => {
+                  setCholUnit(value as 'mmol/L' | 'mg/dl');
+                  setHdlUnit(value as 'mmol/L' | 'mg/dl');
+                  setTrigUnit(value as 'mmol/L' | 'mg/dl');
+                }}
+                placeholder={t.unit}
+                className="h-12 rounded-r-xl border-l-0"
+                isSuffix={true}
+              />
+            }
           />
         </div>
       </div>
@@ -143,24 +146,27 @@ const LDLCalculator: React.FC = () => {
             onChange={(value) =>
               setHdl(value === '' ? '' : (typeof value === 'number' ? value : parseFloat(value)))
             }
-            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-[tomato] focus:border-[tomato] focus:outline-none"
             required
-          />
-          <CustomSelect
-            options={[
-              { value: 'mmol/L', label: 'mmol/L' },
-              { value: 'mg/dl', label: 'mg/dL' },
-            ]}
-            value={hdlUnit}
-            onChange={(value) => {
-              setHdlUnit(value as 'mmol/L' | 'mg/dl');
-              setCholUnit(value as 'mmol/L' | 'mg/dl');
-              setTrigUnit(value as 'mmol/L' | 'mg/dl');
-            }}
-            placeholder={t.unit}
+            suffix={
 
-            className="rounded-r-xl border-l-0 mt-7"
-            isSuffix={true}
+              <CustomSelect
+                options={[
+                  { value: 'mmol/L', label: 'mmol/L' },
+                  { value: 'mg/dl', label: 'mg/dL' },
+                ]}
+                value={hdlUnit}
+                onChange={(value) => {
+                  setHdlUnit(value as 'mmol/L' | 'mg/dl');
+                  setCholUnit(value as 'mmol/L' | 'mg/dl');
+                  setTrigUnit(value as 'mmol/L' | 'mg/dl');
+                }}
+                placeholder={t.unit}
+
+                className="h-12 rounded-r-xl border-l-0"
+                isSuffix={true}
+              />
+            }
           />
         </div>
       </div>
@@ -176,24 +182,27 @@ const LDLCalculator: React.FC = () => {
             onChange={(value) =>
               setTrig(value === '' ? '' : (typeof value === 'number' ? value : parseFloat(value)))
             }
-            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+            className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-[tomato] focus:border-[tomato] focus:outline-none"
             required
+            suffix={
+              <CustomSelect
+                options={[
+                  { value: 'mmol/L', label: 'mmol/L' },
+                  { value: 'mg/dl', label: 'mg/dL' },
+                ]}
+                value={trigUnit}
+                onChange={(value) => {
+                  setTrigUnit(value as 'mmol/L' | 'mg/dl');
+                  setCholUnit(value as 'mmol/L' | 'mg/dl');
+                  setHdlUnit(value as 'mmol/L' | 'mg/dl');
+                }}
+                placeholder={t.unit}
+                className="h-12 rounded-r-xl border-l-0"
+                isSuffix={true}
+              />
+            }
           />
-          <CustomSelect
-            options={[
-              { value: 'mmol/L', label: 'mmol/L' },
-              { value: 'mg/dl', label: 'mg/dL' },
-            ]}
-            value={trigUnit}
-            onChange={(value) => {
-              setTrigUnit(value as 'mmol/L' | 'mg/dl');
-              setCholUnit(value as 'mmol/L' | 'mg/dl');
-              setHdlUnit(value as 'mmol/L' | 'mg/dl');
-            }}
-            placeholder={t.unit}
-            className="rounded-r-xl border-l-0 mt-7"
-            isSuffix={true}
-          />
+
         </div>
       </div>
 

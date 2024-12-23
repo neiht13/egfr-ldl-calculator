@@ -87,10 +87,21 @@ const EGFRCalculator: React.FC = () => {
           placeholder={t.creatininePlaceholder}
           value={creatinine}
           onChange={(value) => setCreatinine(value === '' ? '' : (typeof value === 'number' ? value : parseFloat(value)))}
-          className="w-full flex-1 h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-blue-500 focus:ring-blue-500 focus:outline-none" // Sử dụng flex-1 để chiếm toàn bộ không gian còn lại
+          className="w-full h-12 p-3 rounded-xl rounded-r-none bg-gray-100 focus:border focus:border-[tomato] focus:border-[tomato] focus:outline-none"
           required
+          suffix={<CustomSelect
+            options={[
+              { value: 'umol', label: 'µmol/L' },
+              { value: 'mgdl', label: 'mg/dL' },
+            ]}
+            value={creatinineUnit}
+            onChange={(value) => setCreatinineUnit(value as 'umol' | 'mgdl')}
+            placeholder={t.unit}
+            className="h-12 rounded-r-xl border-l-0" 
+            isSuffix={true}
+          />}
         />
-        <CustomSelect
+        {/* <CustomSelect
           options={[
             { value: 'umol', label: 'µmol/L' },
             { value: 'mgdl', label: 'mg/dL' },
@@ -98,13 +109,12 @@ const EGFRCalculator: React.FC = () => {
           value={creatinineUnit}
           onChange={(value) => setCreatinineUnit(value as 'umol' | 'mgdl')}
           placeholder={t.unit}
-          className="h-12 mt-7 rounded-r-xl border-l-0" // Đặt chiều cao tương tự với InputGroup
+          className="h-12 mt-7 rounded-r-xl border-l-0" 
           isSuffix={true}
-        />
+        /> */}
       </div>
 
 
-      {/* Các input đơn giản sử dụng InputGroup */}
       <div className="grid grid-cols-2 gap-5 mb-5">
         <InputGroup
           label={t.age}
@@ -112,12 +122,12 @@ const EGFRCalculator: React.FC = () => {
           placeholder={t.agePlaceholder}
           value={age}
           onChange={(value) => setAge(value === '' ? '' : (typeof value === 'number' ? value : parseInt(value)))}
-          className="w-full h-12 p-3 rounded-xl bg-gray-100 focus:border-blue-500 focus:ring-blue-500 focus:outline-none"
+          className="w-full h-12 p-3 rounded-xl bg-gray-100 focus:border focus:border-[tomato] focus:border-[tomato] focus:outline-none"
           required
         />
-        {/* Trường hợp sử dụng CustomSelect cho Gender */}
+
         <div className="">
-          <label className="block h-6 font-bold text-gray-700">{t.gender}</label>
+          <label className="block h-6 mb-1 font-bold text-gray-700">{t.gender}</label>
           <CustomSelect
             options={[
               { prefix: "👨", value: 'male', label: 'Nam' },
@@ -132,9 +142,8 @@ const EGFRCalculator: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-5 mb-5">
-        {/* Trường hợp sử dụng CustomSelect cho Ethnicity */}
         <div className="mb-5">
-          <label className="block font-bold text-gray-700">{t.ethnicity}</label>
+          <label className="block font-bold mb-1  text-gray-700">{t.ethnicity}</label>
           <CustomSelect
             options={[
               { value: 'non_african', label: t.nonAfrican },
@@ -146,9 +155,8 @@ const EGFRCalculator: React.FC = () => {
             className="rounded-xl"
           />
         </div>
-        {/* Trường hợp sử dụng CustomSelect cho Constant */}
         <div className="mb-5">
-          <label className="block font-bold text-gray-700">{t.constant}</label>
+          <label className="block font-bold mb-1  text-gray-700">{t.constant}</label>
           <CustomSelect
             options={[
               { value: '186', label: '186' },

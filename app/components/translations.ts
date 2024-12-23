@@ -8,7 +8,7 @@ const translations = {
       egfr: "eGFR Calculator",
       ldl: "LDL Calculator",
       creatinine: "Creatinine Level:",
-      age: "Age/Year of Birth:",
+      age: "Age / Year:",
       gender: "Gender:",
       ethnicity: "Ethnicity:",
       constant: "Select Constant:",

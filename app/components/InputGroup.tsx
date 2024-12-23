@@ -27,7 +27,7 @@ const InputGroup: React.FC<InputGroupProps> = ({
   return (
     <div className="w-full">
       <label className="w-full block h-6 mb-1 font-bold text-gray-700">{label}</label>
-      <div>
+      <div className='flex'>
         <input
           type={type}
           placeholder={placeholder}

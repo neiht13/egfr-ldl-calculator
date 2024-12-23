@@ -25,7 +25,7 @@ const LanguageToggle: React.FC = () => {
   };
 
   return (
-    <div className="absolute top-5 right-5 w-8 h-8 group"> {/* Thêm class group */}
+    <div className="fixed z-40 top-3 right-3 w-8 h-8 group"> {/* Thêm class group */}
       <button
         onClick={handleToggle}
         aria-label={t.tooltipLanguage}
@@ -37,6 +37,7 @@ const LanguageToggle: React.FC = () => {
           className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-200 ${isAnimating ? 'opacity-0' : 'opacity-100'
             }`}
         />
+        
       </button>
       <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-700 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         {t.tooltipLanguage}

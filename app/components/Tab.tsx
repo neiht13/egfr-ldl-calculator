@@ -12,10 +12,10 @@ const Tab: React.FC<TabProps> = ({ label, active, onClick }) => {
   return (
     <div
       className={classNames(
-        "flex-1 text-center py-2 cursor-pointer font-semibold text-gray-800 border-b-2 transition-colors duration-300",
+        "flex-1 text-center py-2 cursor-pointer font-semibold border-b-2 transition-colors duration-300",
         {
-          "border-b-red-500 text-red-500": active,
-          "border-b-gray-300 hover:text-gray-700": !active,
+          "border-[tomato] text-[tomato] text-base": active,
+          "border-b-gray-300 hover:text-gray-700 text-gray-500 text-sm": !active,
         }
       )}
       onClick={onClick}
